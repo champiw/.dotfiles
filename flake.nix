@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs: 
   {
-    nixosConfigurations.dopros = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs self; };
       modules = [
