@@ -30,7 +30,6 @@
     mako
     pavucontrol
     wl-clipboard
-    xorg.xlsclients
   ];
 
   programs.xwayland.enable = true;
