@@ -11,7 +11,8 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    
+    powerManagement.enable = true;
+
     # Prime config
     prime = {
       offload = {
@@ -24,7 +25,12 @@
 
     open = false;
     nvidiaSettings = true;
-    #package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  };
+
+  # Gpu order
+  environment.sessionVariables = {
+    WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
   };
 
   # Chip intel
