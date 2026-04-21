@@ -4,12 +4,11 @@
   programs.niri.enable = true;
 
   # Portals for screenshare
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
-  };
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ 
+    pkgs.xdg-desktop-portal-gtk 
+    pkgs.xdg-desktop-portal-gnome
+  ];
 
   programs.dconf.enable = true;
 
