@@ -4,12 +4,20 @@
   programs.niri.enable = true;
 
   # Portals for screenshare
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ 
-    pkgs.xdg-desktop-portal-gtk 
-    pkgs.xdg-desktop-portal-gnome
-  ];
-
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal-gtk 
+      xdg-desktop-portal-gnome
+    ];
+    config = { 
+      niri = { 
+        default = [ "gnome" "gtk" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      };
+    };
+  };
+  
   programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
