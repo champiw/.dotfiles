@@ -18,12 +18,12 @@
     };
   };
   
-  programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
     xwayland-satellite
     waybar
     mako
+    fuzzel
     pavucontrol
     wl-clipboard
   ];
@@ -36,7 +36,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri-session";
         user = "champi";
       };
     };

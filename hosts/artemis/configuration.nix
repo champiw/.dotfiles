@@ -16,10 +16,9 @@
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-	  fastfetch
-	  alacritty
-	  fuzzel
-	  xdg-utils
+    fastfetch
+    alacritty
+    xdg-utils
   ];
 
   system.stateVersion = "25.11";
