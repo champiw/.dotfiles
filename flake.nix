@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Champi's nixos configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs: 
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs: 
   {
     nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
