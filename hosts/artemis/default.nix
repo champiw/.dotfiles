@@ -2,10 +2,12 @@
 
 {
   imports = [
+
     # System hardware modules
     ./hardware.nix
     ../../modules/hardware/laptop.nix
     ../../modules/hardware/pipewire.nix
+    ../../modules/services/ssh.nix
     
     # Base modules
     ../../modules/base
@@ -35,8 +37,8 @@
     extraSpecialArgs = { inherit inputs; };
     backupFileExtension = "backup";
     users.champi = {
-      home.username = "champi";
-      home.homeDirectory = "/home/champi";
+#      home.username = "champi";
+#      home.homeDirectory = "/home/champi";
       home.stateVersion = "25.11"; 
     };
   };

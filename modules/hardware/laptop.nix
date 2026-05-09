@@ -47,4 +47,13 @@
     "snd_intel_dspcfg.dsp_driver=1" 
   ];
 
+  # Disable lid suspend
+  services.logind = {
+    lidSwitch = "ignore";
+    lidSwitchExternalPower = "ignore";
+  };
+  
+  # Power saving for when idle
+  powerManagement.cpuFreqGovernor = "powersave";
+
 }

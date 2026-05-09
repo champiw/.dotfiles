@@ -9,13 +9,25 @@
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs: 
   {
-    nixosConfigurations.artemis = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs self; };
-      modules = [
-        ./hosts/artemis/default.nix
-      ];
-    };
+    nixosConfigurations = {
 
+      # Main desktop
+      dopros = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs self; };
+        modules = [
+          ./hosts/dopros/default.nix
+        ];
+      };
+      
+      # Laptop server
+      artemis = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs self; };
+        modules = [
+          ./hosts/artemis/default.nix
+        ];
+      };
+    };
   };
 }
