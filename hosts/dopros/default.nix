@@ -45,7 +45,6 @@
   # Host packages
   environment.systemPackages = with pkgs; [
     fastfetch
-    xdg-utils
   ]; 
   
 }

@@ -25,6 +25,7 @@
     fuzzel
     pavucontrol
     wl-clipboard
+    xdg-utils
     waybar
   ];
 

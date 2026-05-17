@@ -13,14 +13,11 @@
     ../../modules/base
 
     # Program modules
-    ../../modules/programs/discord.nix
-    ../../modules/programs/steam.nix
-    ../../modules/programs/firefox.nix
-
     ../../modules/programs/alacritty.nix
     
-    # Desktop environment modules
-    ../../modules/desktop/niri.nix
+    # Services
+    ../../modules/services/samba.nix
+    ../../modules/services/jellyfin.nix
     
     # Home manager
     inputs.home-manager.nixosModules.home-manager
@@ -46,7 +43,6 @@
   # Host packages
   environment.systemPackages = with pkgs; [
     fastfetch
-    xdg-utils
   ];
 
 }
