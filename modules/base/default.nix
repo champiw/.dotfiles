@@ -41,7 +41,8 @@
 
   # Basic packages
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
+    tmux
     git
     curl
     wget
