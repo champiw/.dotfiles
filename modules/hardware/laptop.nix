@@ -49,8 +49,8 @@
 
   # Disable lid suspend
   services.logind.settings.Login= {
-    HandlelidSwitch = "ignore";
-    HandlelidSwitchExternalPower = "ignore";
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
   };
   
   # Power saving for when idle
