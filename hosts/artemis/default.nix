@@ -19,7 +19,8 @@
     # Services
     ../../modules/services/samba.nix
     ../../modules/services/jellyfin.nix
-    
+    ../../modules/services/syncthing.nix
+
     # Home manager
     inputs.home-manager.nixosModules.home-manager
   ];
