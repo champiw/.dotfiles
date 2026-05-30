@@ -48,4 +48,12 @@
     wget
     btop
   ];
+
+  # Create user directories
+  home-manager.users.champi = {  
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+    }; 
+  };
 }

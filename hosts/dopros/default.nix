@@ -5,8 +5,8 @@
 
     # System hardware
     ./hardware.nix
-    ../../modules/hardware/laptop.nix
     ../../modules/hardware/pipewire.nix
+    ../../modules/hardware/nvidia-gpu.nix
 
     # Base modules
     ../../modules/base
@@ -37,7 +37,7 @@
     backupFileExtension = "backup";
     users.champi = {
       home.username = "champi";
-      home.homeDirectory = "/home/champi/";
+      home.homeDirectory = "/home/champi";
       home.stateVersion = "25.11";
     };
   };
