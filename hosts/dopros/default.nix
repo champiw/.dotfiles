@@ -12,7 +12,7 @@
     ../../modules/base
     
     # Programs
-    ../../modules/programs/discord.nix
+    ../../modules/programs/vencord.nix
     ../../modules/programs/steam.nix
     ../../modules/programs/firefox.nix
 

@@ -68,11 +68,17 @@
       }
       
       // Output
-      output "eDP-1" {
-        mode "1920x1080@60.0"
+      output "HDMI-A-1" {
+        mode "1920x1080@144.001"
         scale 1.0
         transform "normal"
-        position x=0 y=0
+        position x=1920 y=0
+      }
+      output "HDMI-A-2" {
+        mode "1920x1080@60.0"
+	scale 1.0
+	transform "90"
+	position x=0 y=0
       }
       
       // Layout
@@ -93,7 +99,7 @@
       
       // Binds
       binds {
-        Alt+Shift+Slash { show-hotkey-overlay; }
+        Alt+Shift+I { show-hotkey-overlay; }
         
         // Terminal and launcher
         Alt+Return { spawn "alacritty"; }
