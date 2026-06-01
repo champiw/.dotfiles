@@ -17,16 +17,13 @@
       };
     };
   };
-  
 
   environment.systemPackages = with pkgs; [
     xwayland-satellite
-    mako
     fuzzel
     pavucontrol
     wl-clipboard
     xdg-utils
-    waybar
   ];
 
   environment.sessionVariables = {
@@ -50,9 +47,19 @@
 
       // Startup
       spawn-at-startup "xwayland-satellite"
-      spawn-at-startup "waybar"
-      spawn-at-startup "mako"
-      
+      spawn-at-startup "noctalia-shell"
+ 
+      // Allows notification actions from noctalia
+      debug {
+        honor-xdg-activation-with-invalid-serial
+      }
+
+      // Set the overview wallpaper on the backdrop
+      layer-rule {
+        match namespace="^noctalia-overview*"
+        place-within-backdrop true
+      }
+
       // Input
       input {
         keyboard { 
@@ -64,7 +71,26 @@
           tap
           dwt
         }
+	mouse {
+          accel-profile "flat"
+          accel-speed -0.1
+        }
         focus-follows-mouse
+      }
+
+      // Cursor settings
+      cursor {
+        xcursor-theme "breeze_cursors"
+	xcursor-size 48
+
+	hide-when-typing
+      }
+      
+      // Disable hot corner
+      gestures {
+        hot-corners {
+          off
+	}
       }
       
       // Output
@@ -93,6 +119,13 @@
           inactive-color "#505050"
         }
       }
+
+      // Set transparency rules
+      window-rule {
+          // When window is unfocused
+          match is-active=false
+          opacity 0.95
+      }
       
       // Screenshot path
       screenshot-path "~/Pictures/Screenshots from %Y-%m-%d_%H-%M-%S.png"
@@ -117,8 +150,8 @@
 
         Alt+N { set-column-width "-10%"; }
         Alt+M { set-column-width "+10%"; }
-        Alt+Shift+N { set-window-height "-10%"; }
-        Alt+Shift+M { set-window-height "+10%"; }
+        Alt+Ctrl+N { set-window-height "-10%"; }
+        Alt+Ctrl+M { set-window-height "+10%"; }
 
         // Focus navigation
         Alt+H { focus-column-left; }
@@ -140,8 +173,8 @@
         Alt+Shift+Up { move-window-up; }
         Alt+Shift+Right { move-column-right; }
 
-        Alt+BracketLeft { consume-or-expel-window-left; }
-        Alt+BracketRight { consume-or-expel-window-right; }
+        Alt+Shift+N { consume-or-expel-window-left; }
+        Alt+Shift+M { consume-or-expel-window-right; }
 
         // Monitors navigation
         Alt+Ctrl+H { focus-monitor-left; }
@@ -179,7 +212,7 @@
         XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }
         XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
         XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-        XF86AudioMicMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+        F16 { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
         // Media controls
         XF86AudioPlay { spawn "playerctl" "play-pause"; }

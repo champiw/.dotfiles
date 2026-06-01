@@ -21,6 +21,7 @@
 
     # Desktop environment modules
     ../../modules/desktop/niri.nix
+    ../../modules/desktop/noctalia.nix
    
     # Home manager
     inputs.home-manager.nixosModules.home-manager
@@ -29,6 +30,17 @@
   # Host config
   networking.hostName = "dopros";
   system.stateVersion = "25.11";
+
+  # Activate bluetooth
+  hardware.bluetooth.enable = true;
+
+  # Fonts config
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    noto-fonts
+    noto-fonts-color-emoji
+  ];
+  fonts.fontconfig.defaultFonts.monospace = [ "JetBrains Mono" ];
 
   # Home manager config
   home-manager = {
@@ -46,6 +58,7 @@
   # Host packages
   environment.systemPackages = with pkgs; [
     fastfetch
+    cifs-utils
   ]; 
   
 }
