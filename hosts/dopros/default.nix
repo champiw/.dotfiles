@@ -16,6 +16,7 @@
     ../../modules/programs/steam.nix
     ../../modules/programs/firefox.nix
     ../../modules/programs/qutebrowser.nix
+    ../../modules/programs/obsidian.nix
 
     ../../modules/programs/alacritty.nix
 
