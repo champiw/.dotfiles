@@ -23,6 +23,9 @@
     ../../modules/desktop/niri.nix
     ../../modules/desktop/noctalia.nix
    
+    # Network storage mount
+    ../../modules/network/network-storage.nix
+
     # Home manager
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -59,7 +62,6 @@
   # Host packages
   environment.systemPackages = with pkgs; [
     fastfetch
-    cifs-utils
   ]; 
   
 }
