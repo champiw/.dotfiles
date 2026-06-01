@@ -1,7 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Don't create default ~/Sync folder.
+   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Dont create default ~/Sync folder
+
    services.syncthing = {
       enable = true;
       openDefaultPorts = true; 
@@ -17,7 +18,7 @@
       settings = {
          devices = {
 	    "dopros" = {
-	       id = "OOE4SHN-62TR6B7-Y2LNEOD-Z3BEWN5-S32BA5N-LNTLYEJ-7D4VHF3-O6L7FQ7";
+	       id = "PW232GW-AYIBQBM-2NLTMNZ-O7U3HEK-KJYWNSA-5SAFGAP-G3WZ3FR-GFUSLQS";
 	    };
 	    
 	    "nothing" = {

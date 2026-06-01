@@ -25,6 +25,9 @@
    
     # Network storage mount
     ../../modules/network/network-storage.nix
+    
+    # Syncthing service
+    ../../modules/services/syncthing-client.nix
 
     # Home manager
     inputs.home-manager.nixosModules.home-manager
