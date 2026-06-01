@@ -36,12 +36,15 @@
               }
               {
                 id = "Bluetooth";
+		displayMode = "alwaysHide";
               }
               {
                 id = "Volume";
+		displayMode = "alwaysHide";
               }
               {
                 id = "Microphone";
+		displayMode = "alwaysHide";
               }
 	      {
 	        id = "NotificationHistory";
@@ -61,9 +64,9 @@
             right = [
               {
                 id = "MediaMini";
-		hideMode = "Always visible";
+		hideMode = "visible";
 		hideWhenIdle = false;
-		compactMode = true;
+		compactMode = false;
 		compactShowAlbumArt = true;
 		maxWidth = 500;
 		panelShowAlbumArt = true;
