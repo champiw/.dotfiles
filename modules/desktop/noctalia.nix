@@ -42,10 +42,6 @@
                 id = "Volume";
 		displayMode = "alwaysHide";
               }
-              {
-                id = "Microphone";
-		displayMode = "alwaysHide";
-              }
 	      {
 	        id = "NotificationHistory";
 		showUnreadBadge = true;
