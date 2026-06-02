@@ -128,7 +128,7 @@
       }
       
       // Screenshot path
-      screenshot-path "~/Pictures/Screenshots from %Y-%m-%d_%H-%M-%S.png"
+      screenshot-path "~/Pictures/screenshots/Screenshots from %Y-%m-%d_%H-%M-%S.png"
       
       // Binds
       binds {
