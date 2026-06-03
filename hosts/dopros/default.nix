@@ -17,6 +17,7 @@
     ../../modules/programs/firefox.nix
     ../../modules/programs/qutebrowser.nix
     ../../modules/programs/obsidian.nix
+    ../../modules/programs/nautilus.nix
     ../../modules/programs/minecraft.nix
 
     ../../modules/programs/alacritty.nix

@@ -47,6 +47,7 @@
     curl
     wget
     btop
+    yazi
   ];
 
   # Create user directories
