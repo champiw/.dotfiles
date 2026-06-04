@@ -48,6 +48,7 @@
     wget
     btop
     yazi
+    tree
   ];
 
   # Create user directories

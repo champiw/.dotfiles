@@ -27,6 +27,12 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/b6c2ae57-d079-4854-9f5a-9011d10cb8ae"; }
     ];
+  
+  # Games disk
+  fileSystems."/games" = {
+    device = "/dev/disk/by-uuid/b8057fba-ce11-4465-8f81-2c89515d32ef";
+    fsType = "ext4";
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
