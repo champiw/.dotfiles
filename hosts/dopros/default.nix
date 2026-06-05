@@ -21,6 +21,7 @@
     ../../modules/programs/obsidian.nix
     ../../modules/programs/file-explorer.nix
     ../../modules/programs/minecraft.nix
+    ../../modules/programs/obs.nix
 
     ../../modules/programs/alacritty.nix
 
