@@ -19,7 +19,7 @@
     ../../modules/programs/nvim.nix
     ../../modules/programs/vscodium.nix
     ../../modules/programs/obsidian.nix
-    ../../modules/programs/nautilus.nix
+    ../../modules/programs/file-explorer.nix
     ../../modules/programs/minecraft.nix
 
     ../../modules/programs/alacritty.nix
