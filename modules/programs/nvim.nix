@@ -5,7 +5,7 @@
 
    # home manager config
    home-manager.users.champi = {
-      
+
       programs.neovim = {
          enable = true;
 	 defaultEditor = true;
@@ -15,6 +15,5 @@
 	 withPython3 = false;
 	 withRuby = false;
       };
-
    };
 }

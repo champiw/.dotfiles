@@ -16,6 +16,8 @@
     ../../modules/programs/steam.nix
     ../../modules/programs/firefox.nix
     ../../modules/programs/qutebrowser.nix
+    ../../modules/programs/nvim.nix
+    ../../modules/programs/vscodium.nix
     ../../modules/programs/obsidian.nix
     ../../modules/programs/nautilus.nix
     ../../modules/programs/minecraft.nix
