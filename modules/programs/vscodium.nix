@@ -9,6 +9,9 @@
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
 	  jdinhlife.gruvbox
+          golang.go
+          ms-python.python
+	  jnoortheen.nix-ide
         ];
 
         userSettings = {
