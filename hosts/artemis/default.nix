@@ -36,8 +36,8 @@
     extraSpecialArgs = { inherit inputs; };
     backupFileExtension = "backup";
     users.champi = {
-#      home.username = "champi";
-#      home.homeDirectory = "/home/champi";
+      home.username = "champi";
+      home.homeDirectory = "/home/champi";
       home.stateVersion = "25.11"; 
     };
   };
