@@ -34,6 +34,12 @@
     fsType = "ext4";
   };
 
+  # Work disk
+  fileSystems."/work" = {
+    device = "/dev/disk/by-uuid/75d75681-92dc-43fb-83f2-fab62fcd7eb6";
+    fsType = "ext4";
+  };
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

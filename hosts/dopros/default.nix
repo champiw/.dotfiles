@@ -40,10 +40,6 @@
     inputs.home-manager.nixosModules.home-manager
   ];
   
-  # Host config
-  networking.hostName = "dopros";
-  system.stateVersion = "25.11";
-
   # Activate bluetooth
   hardware.bluetooth.enable = true;
 
@@ -55,6 +51,16 @@
     noto-fonts-cjk-serif
   ];
   fonts.fontconfig.defaultFonts.monospace = [ "JetBrains Mono" ];
+
+  # Usb and external disks
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
+  # --- Common configs across hosts ---
+
+  # Host config
+  networking.hostName = "dopros";
+  system.stateVersion = "25.11";
 
   # Home manager config
   home-manager = {
