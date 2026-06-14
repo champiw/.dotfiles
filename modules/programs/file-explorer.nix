@@ -6,6 +6,7 @@
     ffmpegthumbnailer
     loupe
     vlc
+    losslesscut
   ];
 
   # Auto detect usb and external drives
