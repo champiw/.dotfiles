@@ -20,6 +20,7 @@
     ../../modules/programs/vscodium.nix
     ../../modules/programs/obsidian.nix
     ../../modules/programs/file-explorer.nix
+    ../../modules/programs/yazi.nix
     ../../modules/programs/minecraft.nix
     ../../modules/programs/obs.nix
     ../../modules/programs/jellyfin-tui.nix
