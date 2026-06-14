@@ -14,7 +14,7 @@
       password=your_samba_password
   */
 
-  fileSystems."/storage" = {
+  fileSystems."/home/champi/storage" = {
     device = "//192.168.4.106/storage";
     fsType = "cifs";
 

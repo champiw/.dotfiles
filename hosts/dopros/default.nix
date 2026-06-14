@@ -52,10 +52,6 @@
   ];
   fonts.fontconfig.defaultFonts.monospace = [ "JetBrains Mono" ];
 
-  # Usb and external disks
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-
   # --- Common configs across hosts ---
 
   # Host config

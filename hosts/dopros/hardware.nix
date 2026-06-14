@@ -29,13 +29,13 @@
     ];
   
   # Games disk
-  fileSystems."/games" = {
+  fileSystems."home/champi/games" = {
     device = "/dev/disk/by-uuid/b8057fba-ce11-4465-8f81-2c89515d32ef";
     fsType = "ext4";
   };
 
   # Work disk
-  fileSystems."/work" = {
+  fileSystems."home/champi/work" = {
     device = "/dev/disk/by-uuid/75d75681-92dc-43fb-83f2-fab62fcd7eb6";
     fsType = "ext4";
   };
