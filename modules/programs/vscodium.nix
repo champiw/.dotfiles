@@ -12,12 +12,18 @@
           golang.go
           ms-python.python
 	  jnoortheen.nix-ide
+	  pkief.material-icon-theme
+	  esbenp.prettier-vscode
+	  svelte.svelte-vscode
+	  bradlc.vscode-tailwindcss
         ];
 
         userSettings = {
           "workbench.colorTheme" = "Gruvbox Dark Medium";
+	  "workbench.iconTheme" = "material-icon-theme";
           "editor.fontFamily" = "JetBrains Mono";
           "terminal.integrated.fontFamily" = "JetBrains Mono";
+	  "svelte.enable-ts-plugin" = true;
         };
       };
     };    
