@@ -44,7 +44,7 @@
               }
 	      {
 	        id = "NotificationHistory";
-		showUnreadBadge = true;
+		showUnreadBadge = false;
 	      }
               {
                 id = "Workspace";
@@ -92,6 +92,19 @@
           avatarImage = "${./wallpapers/chen.jpg}";
           radiusRatio = 0.2;
         };
+	notifications = {
+          enabled = true;
+          density = "default";
+          lowUrgencyDuration = 3;
+          normalUrgencyDuration = 3;
+          criticalUrgencyDuration = 10;
+          clearDismissed = true;
+          saveToHistory = {
+            low = false;
+            normal = true;
+            critical = true;
+          };
+	};
         location = {
           monthBeforeDay = false;
           name = "Galicia, Spain";

@@ -21,6 +21,7 @@
         userSettings = {
           "workbench.colorTheme" = "Gruvbox Dark Medium";
 	  "workbench.iconTheme" = "material-icon-theme";
+	  "workbench.sideBar.location" = "right";
           "editor.fontFamily" = "JetBrains Mono";
           "terminal.integrated.fontFamily" = "JetBrains Mono";
 	  "svelte.enable-ts-plugin" = true;
