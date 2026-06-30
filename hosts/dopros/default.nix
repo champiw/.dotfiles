@@ -17,7 +17,7 @@
     ../../modules/programs/firefox.nix
     ../../modules/programs/qutebrowser.nix
     ../../modules/programs/nvim.nix
-    ../../modules/programs/vscodium.nix
+    ../../modules/programs/vscode.nix
     ../../modules/programs/obsidian.nix
     ../../modules/programs/file-explorer.nix
     ../../modules/programs/yazi.nix
