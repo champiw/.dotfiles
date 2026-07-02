@@ -112,6 +112,7 @@
         gaps 8
         center-focused-column "never"
         default-column-width { proportion 0.5; }
+	// aa proportion 0.33333;
         
         focus-ring {
           width 2
@@ -147,6 +148,11 @@
         Alt+Shift+F { fullscreen-window; }
         Alt+O { toggle-overview; }
         Alt+C { center-column; }
+
+	Alt+1 { set-column-width "33.3%"; }
+	Alt+2 { set-column-width "50%"; }
+	Alt+3 { set-column-width "66.67%"; }
+	Alt+5 { set-column-width "74.4%"; }
 
         Alt+N { set-column-width "-10%"; }
         Alt+M { set-column-width "+10%"; }
