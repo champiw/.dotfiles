@@ -94,8 +94,8 @@
       }
       
       // Output
-      output "HDMI-A-1" {
-        mode "1920x1080@144.001"
+      output "DP-2" {
+        mode "3440x1440@180.000"
         scale 1.0
         transform "normal"
         position x=1920 y=0
@@ -111,8 +111,7 @@
       layout {
         gaps 8
         center-focused-column "never"
-        default-column-width { proportion 0.5; }
-	// aa proportion 0.33333;
+        default-column-width { proportion 0.33333; }
         
         focus-ring {
           width 2

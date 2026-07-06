@@ -87,11 +87,6 @@
           rightClickAction = "controlCenter";
           rightClickFollowMouse = true;
         };
-        colorSchemes.predefinedScheme = "Gruvbox";
-	general = {
-          avatarImage = "${./wallpapers/chen.jpg}";
-          radiusRatio = 0.2;
-        };
 	notifications = {
           enabled = true;
           density = "default";
@@ -109,14 +104,34 @@
           monthBeforeDay = false;
           name = "Galicia, Spain";
         };
-	wallaper = {
+	general = {
+          avatarImage = "${./wallpapers/chen.jpg}";
+          radiusRatio = 0.2;
+        };
+        colorSchemes = {
+          useWallpaperColors = true;
+          predefinedScheme = "Gruvbox"; 
+          darkMode = true;
+          generationMethod = "content";
+          syncGsettings = true;
+        };
+	wallpaper = {
+          enabled = true;
+          overviewEnabled = false;
           directory = "${./wallpapers}";
-	};
+          viewMode = "single";
+          setWallpaperOnAllMonitors = true;
+          linkLightAndDarkWallpapers = true;
+          fillMode = "crop";
+          transitionDuration = 1500;
+          transitionType = [ "disc" ];
+          transitionEdgeSmoothness = 0.30;
+        };
       };
     };
     home.file.".cache/noctalia/wallpapers.json" = {
       text = builtins.toJSON {
-        defaultWallpaper = "${./wallpapers/village.jpg}";
+        defaultWallpaper = "${./wallpapers/landscape.png}";
       };
     };
   };
