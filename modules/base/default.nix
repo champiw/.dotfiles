@@ -55,9 +55,11 @@
     git
     curl
     wget
-    btop
     yazi
     tree
+    (btop.override {
+	cudaSupport = true;
+    })
   ];
 
   # Create user directories
