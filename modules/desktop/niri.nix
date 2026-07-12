@@ -98,13 +98,7 @@
         mode "3440x1440@180.000"
         scale 1.0
         transform "normal"
-        position x=1920 y=0
-      }
-      output "HDMI-A-2" {
-        mode "1920x1080@60.0"
-	scale 1.0
-	transform "90"
-	position x=0 y=0
+        position x=0 y=0
       }
       
       // Layout

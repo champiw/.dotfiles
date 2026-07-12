@@ -5,4 +5,6 @@
     enable = true;
     remotePlay.openFirewall = true;
   };
+
+  programs.gamescope.enable = true;
 }
