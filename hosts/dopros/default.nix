@@ -29,6 +29,9 @@
 
     ../../modules/programs/alacritty.nix
 
+    # Local AI
+    ../../modules/ai/default.nix
+
     # Desktop environment modules
     ../../modules/desktop/niri.nix
     ../../modules/desktop/noctalia.nix
