@@ -4,7 +4,7 @@
   spec-type = "draft-mtp";
   jinja = true;
   n-gpu-layers = 500;
-  n-cpu-moe = 29;
+  n-cpu-moe = 32;
   flash-attn = "on";
 
   cache-type-k = "q8_0";

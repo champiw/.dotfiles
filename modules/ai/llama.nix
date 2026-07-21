@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   username = builtins.head (builtins.attrNames config.users.users);
@@ -12,6 +12,17 @@ in
 {
   environment.systemPackages = [
     llamaPackage
+
+    # Alias commands
+    (pkgs.writeShellScriptBin "llama-start" ''
+      exec sudo systemctl start llama-cpp
+    '')
+    (pkgs.writeShellScriptBin "llama-stop" ''
+      exec sudo systemctl stop llama-cpp
+    '')
+    (pkgs.writeShellScriptBin "llama-status" ''
+      exec systemctl status llama-cpp
+    '')
   ];
 
   services.llama-cpp = {
