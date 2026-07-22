@@ -1,19 +1,20 @@
 { pkgs, ... }:
 
 {
-   environment.systemPackages = with pkgs; [ neovim ];
+   home-manager.users.champi = { config, ... }: {
+      home.packages = with pkgs; [
+        neovim
+		#ripgrep
+		#nil
+		#nixpkgs-fmt
+		#nodejs
+		#gcc
+      ];
 
-   # home manager config
-   home-manager.users.champi = {
-
-      programs.neovim = {
-         enable = true;
-	 defaultEditor = true;
-	 viAlias = true;
-         vimAlias = true;
-
-	 withPython3 = false;
-	 withRuby = false;
+      # Symlink nvim folder with lua config
+      xdg.configFile."nvim" = {
+        source = config.lib.file.mkOutOfStoreSymlink 
+		"${config.home.homeDirectory}/.dotfiles/modules/programs/nvim";
       };
    };
 }
