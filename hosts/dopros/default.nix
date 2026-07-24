@@ -15,7 +15,6 @@
     ../../modules/programs/vencord.nix
     ../../modules/programs/steam.nix
     ../../modules/programs/firefox.nix
-    ../../modules/programs/qutebrowser.nix
     ../../modules/programs/nvim.nix
     ../../modules/programs/vscode.nix
     ../../modules/programs/obsidian.nix
@@ -25,7 +24,6 @@
     ../../modules/programs/obs.nix
     ../../modules/programs/jellyfin-tui.nix
     ../../modules/programs/vial.nix
-    ../../modules/programs/osu.nix
 
     ../../modules/programs/alacritty.nix
 
