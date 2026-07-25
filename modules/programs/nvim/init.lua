@@ -9,7 +9,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.g.mapleader = " "
 
--- vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)                -- leader + cd = change directory with netrw
+vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)                -- leader + cd = change directory with netrw
 vim.keymap.set('n', '<leader>so', ':update<CR> :source<CR>') -- leader + so = source config
 vim.keymap.set('i', '<C-BS>', '<C-W>', { noremap = true })   -- ctrl + bksp = delete whole word
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y<CR>')    -- leader + y = copy to system clipboard
@@ -22,7 +22,6 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.lib" },
 	{ src = "https://github.com/saghen/blink.cmp" },
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/akinsho/toggleterm.nvim" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/folke/trouble.nvim" },
@@ -113,20 +112,6 @@ vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>")
 vim.keymap.set("n", "<leader>b", ":Pick buffers<CR>")
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
-
--- Oil config
-
-require("oil").setup({
-	columns = {
-		"permissions",
-		"icon",
-	},
-	view_options = {
-		show_hidden = true,
-	},
-})
-
-vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>")
 
 -- ToggleTerm config
 
