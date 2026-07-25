@@ -9,7 +9,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)                -- leader + cd = change directory
+-- vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)                -- leader + cd = change directory with netrw
 vim.keymap.set('n', '<leader>so', ':update<CR> :source<CR>') -- leader + so = source config
 vim.keymap.set('i', '<C-BS>', '<C-W>', { noremap = true })   -- ctrl + bksp = delete whole word
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y<CR>')    -- leader + y = copy to system clipboard
@@ -21,9 +21,17 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	{ src = "https://github.com/saghen/blink.lib" },
 	{ src = "https://github.com/saghen/blink.cmp" },
+	{ src = "https://github.com/nvim-mini/mini.nvim" },
+	{ src = "https://github.com/stevearc/oil.nvim" },
+	{ src = "https://github.com/akinsho/toggleterm.nvim" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/folke/trouble.nvim" },
 })
 
+-- Theme config
 
+require("gruvbox").setup()
+vim.cmd.colorscheme("gruvbox")
 
 -- LSPs setup
 local lsp_servers = {
@@ -93,8 +101,57 @@ require("blink.cmp").setup({
 	},
 })
 
--- Theme config
+-- Mini nvim config
 
-require("gruvbox").setup()
-vim.cmd.colorscheme("gruvbox")
---vim.cmd(":hi statusline guibg=NONE")
+require("mini.pairs").setup()      -- Adds a closing symbol
+require("mini.surround").setup()   -- saiw{thing to surround}
+require("mini.statusline").setup() -- Better statusline
+
+require("mini.pick").setup()       -- File finder and navigation
+
+vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>")
+vim.keymap.set("n", "<leader>b", ":Pick buffers<CR>")
+vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
+
+-- Oil config
+
+require("oil").setup({
+	columns = {
+		"permissions",
+		"icon",
+	},
+	view_options = {
+		show_hidden = true,
+	},
+})
+
+vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>")
+
+-- ToggleTerm config
+
+require("toggleterm").setup({
+    direction = "float",
+    open_mapping = [[<C-t>]],
+    float_opts = {
+        border = "rounded",
+    },
+})
+
+--  GitSigns config
+
+require("gitsigns").setup({
+    signs = {
+        add          = { text = "+" },
+        change       = { text = "~" },
+        delete       = { text = "_" },
+        topdelete    = { text = "‾" },
+        changedelete = { text = "~" },
+    },
+})
+
+require("trouble").setup({
+	focus = true,
+})
+
+vim.keymap.set("n", "<leader>q", "<CMD>Trouble diagnostics toggle<CR>")
