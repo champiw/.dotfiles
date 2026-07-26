@@ -116,23 +116,23 @@ vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
 -- ToggleTerm config
 
 require("toggleterm").setup({
-    direction = "float",
-    open_mapping = [[<C-t>]],
-    float_opts = {
-        border = "rounded",
-    },
+	direction = "float",
+	open_mapping = [[<C-t>]],
+	float_opts = {
+		border = "rounded",
+	},
 })
 
 --  GitSigns config
 
 require("gitsigns").setup({
-    signs = {
-        add          = { text = "+" },
-        change       = { text = "~" },
-        delete       = { text = "_" },
-        topdelete    = { text = "‾" },
-        changedelete = { text = "~" },
-    },
+	signs = {
+		add          = { text = "+" },
+		change       = { text = "~" },
+		delete       = { text = "_" },
+		topdelete    = { text = "‾" },
+		changedelete = { text = "~" },
+	},
 })
 
 require("trouble").setup({
@@ -144,7 +144,7 @@ vim.keymap.set("n", "<leader>q", "<CMD>Trouble diagnostics toggle<CR>")
 
 -- Package management ----------------------------------------------------------
 -- :PackUpdate - Updates all plugins
--- :PackUpdate blink.cmp - Updates only one 
+-- :PackUpdate blink.cmp - Updates only one
 -- :PackDelete oil.nvim - Removes a plugin
 -- :PackClean - Removes installed plugins not present in vim.pack.add()
 
