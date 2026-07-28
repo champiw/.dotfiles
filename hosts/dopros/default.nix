@@ -24,6 +24,8 @@
     ../../modules/programs/obs.nix
     ../../modules/programs/jellyfin-tui.nix
     ../../modules/programs/vial.nix
+	
+	../../modules/programs/osu.nix
 
     ../../modules/programs/alacritty.nix
 
