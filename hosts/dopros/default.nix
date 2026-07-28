@@ -27,6 +27,9 @@
 
     ../../modules/programs/alacritty.nix
 
+	# Docker
+	../../modules/services/docker.nix
+
     # Local AI
     ../../modules/ai/default.nix
 
