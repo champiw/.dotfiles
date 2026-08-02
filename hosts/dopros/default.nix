@@ -83,6 +83,7 @@
   # Host packages
   environment.systemPackages = with pkgs; [
     fastfetch
+	libreoffice
   ]; 
   
 }
