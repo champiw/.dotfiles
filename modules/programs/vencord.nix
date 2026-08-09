@@ -5,5 +5,6 @@
     home.packages = with pkgs; [
       vesktop
     ];
+	# TODO: make declarative configuration
   };
 }

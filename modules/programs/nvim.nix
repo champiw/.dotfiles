@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
 	home-manager.users.champi = { config, pkgs, ... }: {
 		home.packages = with pkgs; [

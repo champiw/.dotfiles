@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   home-manager.users.champi = {
     programs.qutebrowser = {

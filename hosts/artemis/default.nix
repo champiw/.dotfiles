@@ -12,10 +12,6 @@
     # Base modules
     ../../modules/base
 
-    # Program modules
-    ../../modules/programs/nvim.nix
-    ../../modules/programs/alacritty.nix
-    
     # Services
     ../../modules/services/samba.nix
     ../../modules/services/jellyfin.nix
