@@ -84,6 +84,7 @@
   environment.systemPackages = with pkgs; [
     fastfetch
 	libreoffice
+	calibre
   ]; 
   
 }
