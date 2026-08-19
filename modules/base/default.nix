@@ -57,6 +57,8 @@
     wget
     yazi
     tree
+	zip
+	unzip
     (btop.override {
 	cudaSupport = true;
     })
