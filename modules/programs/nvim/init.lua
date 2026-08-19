@@ -11,6 +11,12 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.g.mapleader = " "
 
+-- Code folding
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldenable = true
+vim.o.foldlevel = 99
+
 vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)                -- leader + cd = change directory with netrw
 vim.keymap.set('n', '<leader>so', ':update<CR> :source<CR>') -- leader + so = source config
 vim.keymap.set('i', '<C-BS>', '<C-W>', { noremap = true })   -- ctrl + bksp = delete whole word
