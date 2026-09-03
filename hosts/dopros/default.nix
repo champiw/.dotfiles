@@ -24,6 +24,7 @@
     ../../modules/programs/obs.nix
     ../../modules/programs/jellyfin-tui.nix
     ../../modules/programs/vial.nix
+	../../modules/programs/qbittorrent.nix
 	
 	../../modules/programs/osu.nix
 
@@ -85,6 +86,7 @@
     fastfetch
 	libreoffice
 	calibre
+	tetrio-desktop
   ]; 
   
 }

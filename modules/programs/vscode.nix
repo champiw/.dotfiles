@@ -9,6 +9,7 @@
         extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
           jdinhlife.gruvbox
+		  tomoki1207.pdf
           golang.go
           ms-python.python
           jnoortheen.nix-ide
