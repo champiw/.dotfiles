@@ -16,6 +16,7 @@
     ../../modules/services/samba.nix
     ../../modules/services/jellyfin.nix
     ../../modules/services/syncthing.nix
+	../../modules/services/qbittorrent.nix
 
     # Home manager
     inputs.home-manager.nixosModules.home-manager
