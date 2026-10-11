@@ -10,6 +10,7 @@
           vscodevim.vim
           jdinhlife.gruvbox
 		  tomoki1207.pdf
+		  ms-azuretools.vscode-containers 	
           golang.go
           ms-python.python
           jnoortheen.nix-ide
