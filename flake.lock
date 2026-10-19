@@ -20,6 +20,21 @@
         "type": "github"
       }
     },
+    "lastbox": {
+      "locked": {
+        "lastModified": 1792431816,
+        "narHash": "sha256-OQ6sgI1h+/Pz95mpFYWM58PzW2Z4hJVvVjczVss3Js8=",
+        "owner": "champiw",
+        "repo": "lastbox",
+        "rev": "d469f61067e44576be4c499b94ba5bf771522823",
+        "type": "github"
+      },
+      "original": {
+        "owner": "champiw",
+        "repo": "lastbox",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1786384358,
@@ -84,6 +99,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "lastbox": "lastbox",
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia"
       }
