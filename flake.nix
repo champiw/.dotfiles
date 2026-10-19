@@ -14,6 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+	lastbox.url = "github:champiw/lastbox";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs: 

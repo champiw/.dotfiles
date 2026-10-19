@@ -17,6 +17,8 @@
     ../../modules/services/jellyfin.nix
     ../../modules/services/syncthing.nix
 	../../modules/services/qbittorrent.nix
+	../../modules/services/docker.nix
+	../../modules/services/lastbox.nix
 
     # Home manager
     inputs.home-manager.nixosModules.home-manager
