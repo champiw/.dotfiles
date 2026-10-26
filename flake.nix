@@ -11,8 +11,10 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia/legacy-v4";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-qt";
     };
+	
+	nixpkgs-qt.url = "github:nixos/nixpkgs/2fcb964de67fcf60b43471c55d5d99e61a9ccb5a";
 
 	lastbox.url = "github:champiw/lastbox";
 
