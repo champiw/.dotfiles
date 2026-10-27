@@ -25,6 +25,8 @@
     ../../modules/programs/jellyfin-tui.nix
     ../../modules/programs/vial.nix
 	../../modules/programs/qbittorrent.nix
+
+	../../modules/class/default.nix
 	
 	../../modules/programs/osu.nix
 
