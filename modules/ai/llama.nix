@@ -29,7 +29,9 @@ in
     enable = true;
     package = llamaPackage;
 
-    settings = profile;
+    settings = profile // {
+      port = 1337;
+    };
   };
 
   systemd.services.llama-cpp = { 
