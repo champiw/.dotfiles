@@ -20,6 +20,7 @@
           bradlc.vscode-tailwindcss
           github.copilot
           github.copilot-chat
+		  ms-vscode-remote.remote-ssh
         ];
 
         userSettings = {
