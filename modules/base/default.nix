@@ -53,6 +53,7 @@
     neovim
     tmux
     git
+	gh
     curl
     wget
     yazi
