@@ -89,6 +89,7 @@
 	libreoffice
 	calibre
 	tetrio-desktop
+	wordcraft
 	gridcraft
   ]; 
   
